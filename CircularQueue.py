@@ -32,6 +32,8 @@ class CircularQueue :
     def __str__(self):
         if self.front < self.rear :
             return str(self.array[self.front+1:self.rear+1])
+        elif self.front == self.rear:
+            return str("[]")
         else :
             return str(self.array[self.front+1:self.capacity] + \
                        self.array[0:self.rear+1] )
